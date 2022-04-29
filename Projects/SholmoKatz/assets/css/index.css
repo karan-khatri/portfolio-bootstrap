@@ -120,8 +120,8 @@ section#hero-section {
 }
 
 section#hero-section > div {
-  flex: 0 0 50%;
-  max-width: 49%;
+  /* flex: 0 0 50%;
+  max-width: 49%; */
 }
 section#hero-section div.text h1 {
   margin-bottom: 30px;
@@ -129,6 +129,17 @@ section#hero-section div.text h1 {
 section#hero-section div.text p {
   max-width: 300px;
   margin-bottom: 30px;
+}
+section#hero-section .playButton {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 0;
+  opacity: 0.5;
+}
+section#hero-section .playButton img {
+  margin: auto;
 }
 
 section#section-2 {
