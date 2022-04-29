@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav > * {
+  margin: 20px 50px;
+}
+
+section {
+  display: flex;
+  margin-bottom: 70px !important;
+}
+
+button {
+  padding: 15px 20px;
+  font-weight: 700;
+  border-radius: 100px;
+  border: 0;
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.p-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+input.s-btn {
+  padding: 15px 20px;
+  font-weight: 700;
+  border-radius: 100px !important;
+  border: 0;
+  outline: 0;
+  background-color: #000;
+  color: #fff;
+  margin: 0 !important;
+}
+button.s-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+button.p-btn:hover {
+  position: relative;
+  top: -2px;
+  box-shadow: 0px 7px 10px rgba(255, 255, 255, 0.3);
+}
+
+input.s-btn:hover {
+  position: relative;
+  top: -2px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+button.s-btn:hover {
+  position: relative;
+  top: -2px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  padding: 12px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  margin-bottom: 20px;
+  width: 250px;
+}
+/* 
+img {
+  width: 100%;
+} */
+
+section#hero-section {
+  padding: 0px 100px;
+  color: white;
+  height: 100vh;
+  background-image: url('../img/header.jpg');
+  background-color: #000;
+  background-position: center;
+  background-attachment: inherit;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+}
+
+section#hero-section > div {
+  flex: 0 0 50%;
+  max-width: 49%;
+}
+section#hero-section div.text h1 {
+  margin-bottom: 30px;
+}
+section#hero-section div.text p {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+section#section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+  text-align: center;
+}
+
+section#section-2 .image img {
+  width: 100%;
+}
+
+section#section-3 {
+  height: 80vh;
+  padding: 0px 100px;
+  background-image: url('../img/section-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+section#section-3 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section#section-4 {
+  display: block;
+  padding: 0 100px;
+  text-align: center;
+}
+
+section#section-4 > div {
+  display: flex;
+  justify-content: center;
+}
+
+section#section-4 > div > div {
+  text-align: left;
+  flex-direction: column;
+  flex: 0 0 50%;
+  max-width: 450px;
+}
+
+section#section-4 > div > div.image img {
+  align-self: flex-end;
+  margin-right: 15px;
+  width: 95%;
+  max-width: 400px;
+}
+
+/* section#section-5 {
+  background-image: url('/section-5.jpg');
+  background-position: center;
+  background-attachment: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  height: 60vh;
+  margin: 0 50px;
+  align-items: center;
+  padding: 50px 30px;
+  color: #fff;
+  border-radius: 30px;
+}
+
+section#section-5 > div {
+  flex: 0 0 50%;
+  max-width: 49%;
+}
+
+section#section-5 .bts-text {
+  align-self: flex-end;
+  padding-left: 1.5rem;
+  margin-left: 2rem;
+  border-left: solid 5px #fff;
+}
+
+section#section-5 p {
+  max-width: 250px;
+} */
+
+section#section-6 {
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 110px;
+}
+section#section-6 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#section-6 > div:first-child {
+  align-self: flex-end;
+}
+
+section#section-6 > div img {
+  width: 100%;
+}
+
+section#section-2 button,
+section#section-4 button {
+  margin-top: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  align-items: center;
+}
+
+footer > * {
+  padding: 15px 50px;
+}
+
+@media (max-width: 900px) {
+  section#hero-section,
+  section#section-2,
+  section#section-3,
+  section#section-4,
+  section#section- {
+    padding: 0 30px;
+  }
+}

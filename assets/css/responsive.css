@@ -1,0 +1,265 @@
+/*---------------------------------
+For WIDTH: 900 Pixels or less
+----------------------------------*/
+
+@media (max-width: 900px) {
+  .detail-section {
+    padding: 40px 0 40px 0;
+  }
+
+  .section-headline {
+    margin-left: 75px;
+  }
+
+  #contact-info-bar {
+    width: 90%;
+  }
+
+  #info-card {
+    padding: 75px 75px 0 75px;
+  }
+
+  #profile-picture {
+    margin: -175px auto 0 auto;
+  }
+
+  .contact-info-bar-list-item {
+    display: block;
+  }
+
+  .contact-info-bar-list-item-icon {
+    font-size: 28px;
+  }
+
+  footer {
+    padding: 8px 75px 8px 75px;
+  }
+}
+
+/*-------------------------------------
+For WIDTH: 720 Pixels or less
+-------------------------------------*/
+
+@media (max-width: 720px) {
+  .detail-section {
+    padding: 40px 0 40px 0;
+  }
+
+  .section-headline {
+    margin-left: 60px;
+  }
+
+  #info-card {
+    padding: 60px 60px 0 60px;
+  }
+
+  #profile-picture {
+    margin: -150px auto 0 auto;
+  }
+
+  .contact-info-bar-list-item-icon {
+    font-size: 27px;
+  }
+
+  footer {
+    display: block;
+    padding: 8px;
+    font-weight: 400;
+  }
+
+  footer a {
+    color: black;
+  }
+
+  footer #left-footer {
+    background: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 50px 0 50px 0;
+  }
+}
+
+/*-----------------------------------
+For WIDTH: 600 Pixels or Less
+------------------------------------*/
+
+@media (max-width: 600px) {
+  .detail-section {
+    display: block;
+    padding: 40px 0 40px 0;
+  }
+
+  .section-headline {
+    width: auto;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .section-brief {
+    width: auto;
+    margin: 10px;
+    font-size: 15px;
+  }
+
+  #contact-info-bar {
+    justify-content: center;
+  }
+
+  #info-card {
+    margin-top: 450px;
+    padding: 40px 40px 0 40px;
+  }
+
+  #profile-picture {
+    margin: -130px auto 0 auto;
+  }
+
+  .contact-info-bar-list-item-icon {
+    font-size: 26px;
+  }
+
+  #contact-info-bar ul {
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .contact-info-bar-list-item {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 10px 0 10px 10px;
+  }
+}
+
+/*-------------------------------------
+For WIDTH: 360 Pixels or Less
+--------------------------------------*/
+
+@media (max-width: 360px) {
+  .full-text {
+    display: none;
+  }
+
+  .short-text {
+    display: inline-block;
+  }
+
+  header {
+    word-break: break-all;
+  }
+
+  header ul li {
+    margin: 10px 0 10px 10px;
+  }
+
+  #contact-info-bar ul {
+    display: block;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  #info-card {
+    padding: 15px 15px 0 15px;
+    margin-top: 500px;
+  }
+
+  .contact-info-bar-list-item {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .contact-info-bar-list-item-icon {
+    font-size: 25px;
+  }
+
+  #profile-picture {
+    margin: -110px auto 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  footer #footer-2 {
+    font-size: 14px;
+  }
+
+  .section-brief {
+    font-size: 14px;
+  }
+
+  .detail-section {
+    padding: 40px 0 40px 0;
+  }
+}
+
+@media (max-width: 240px) {
+  .contact-info-bar-list-item-icon {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .contact-info-bar-list-item {
+    margin-right: 10px;
+  }
+
+  header ul li {
+    margin: 10px 0 10px 10px;
+    font-size: 13px;
+  }
+
+  #download-btn {
+    font-size: 13px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  #info-card {
+    word-break: break-all;
+    padding: 0;
+    size: inherit;
+  }
+
+  #info-card h2 {
+    font-size: 20px;
+  }
+
+  #info-card h4 {
+    font-size: 15px;
+  }
+
+  #birth-and-email-info li {
+    word-wrap: break-word;
+    font-size: 13px;
+  }
+
+  #social-links li {
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  #profile-picture {
+    height: 100px;
+    width: 100px;
+    margin: -50px auto 0 auto;
+  }
+
+  footer #social-media-footer ul li {
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  footer ul li .fab {
+    font-size: 25px;
+  }
+}
+
+/*-------------------------------------
+For WIDTH: 1200 Pixels or more
+-------------------------------------*/
+
+@media (min-width: 1200px) {
+  #contact-info-bar {
+    width: 1000px;
+  }
+}
