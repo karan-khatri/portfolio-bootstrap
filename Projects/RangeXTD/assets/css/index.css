@@ -1,0 +1,178 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  max-width: 980px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.progress {
+  margin-top: 8px;
+  border-radius: 100px;
+  height: 15px;
+  margin-right: 12px;
+}
+
+.star-5 .bi-star-fill,
+.star-4 .bi-star-fill,
+.star-3 .bi-star-fill,
+.star-2 .bi-star-fill,
+.star-1 .bi-star-fill {
+  font-size: 0.9rem;
+}
+
+.overall-rating-stars .bi-star-fill,
+.overall-rating-stars .bi-star-half {
+  font-size: 1.3rem;
+}
+
+.buy-button {
+  background-color: #1db900;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  /* padding: 10px 60px; */
+  width: 100%;
+}
+
+.buy-button:hover {
+  background-color: #227839;
+  color: #fff;
+}
+
+ul {
+  list-style-image: url('./images/icon-wifi.png');
+}
+
+ul li {
+  margin-bottom: 15px;
+}
+
+.customer-rating {
+  margin-bottom: 12px;
+}
+
+.details {
+  background-color: #ddf5fb;
+}
+
+.grey-section {
+  background-color: #ddd;
+}
+
+.star-rating-perct {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.star-rating-perct .progress {
+  width: 75%;
+}
+
+.banner-content-image {
+  max-width: 125%;
+  margin-top: 15%;
+  margin-left: -50px;
+}
+
+hr {
+  height: 5px;
+  width: 76px;
+}
+
+@media (max-width: 760px) {
+  .star-rating-perct .progress {
+    width: 63%;
+  }
+}
+@media (max-width: 400px) {
+  .star-rating-perct .progress {
+    width: 50%;
+  }
+}
+.underline-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.underline-container .underline {
+  display: inline-block;
+  height: 5px;
+  width: 76px;
+  background-color: #0090fe;
+}
+
+.footer-links a {
+  text-decoration: none !important;
+  color: #000;
+}
+
+#pop-up {
+  width: 320px;
+  margin-left: 20px;
+  background-color: #0090fe;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: fixed;
+  bottom: -120px;
+  bottom: 14% !important;
+  left: -500px;
+  min-height: 80px;
+  min-width: 320px;
+  max-width: 90%;
+  z-index: 9999;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  border-radius: 19px;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #999;
+  top: 20px !important;
+  bottom: none !important;
+  max-height: 113px;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+#pop-up-link:hover {
+  font-weight: bold;
+}
+
+@keyframes example {
+  0% {
+    left: -500px;
+  }
+
+  25% {
+    left: 0px;
+  }
+
+  50% {
+    left: 0px;
+  }
+  100% {
+    left: -500px;
+  }
+}
