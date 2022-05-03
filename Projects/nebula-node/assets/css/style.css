@@ -58,7 +58,22 @@ body {
   background-size: cover, cover, cover;
   background-blend-mode: screen;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  padding-top: 70px !important;
+  padding-top: 150px !important;
+  padding-bottom: 100px !important;
+}
+
+#hero-section-right {
+  position: absolute;
+  right: 0px;
+  /* margin-top: -70px; */
+  max-height: 40vh;
+}
+
+#hero-section-right .img-container img {
+  max-width: 100% !important;
+  margin-left: auto;
+  max-height: 50vh;
+  width: auto !important;
 }
 
 /********************************* 
@@ -94,8 +109,8 @@ body {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   border-radius: 100px;
   border: none;
   background: #992cc0;
@@ -104,8 +119,8 @@ body {
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   border: none;
   border-radius: 100px;
   background: #992cc0;
@@ -138,7 +153,7 @@ body {
 
 .values .value {
   display: inline-block;
-  width: 35px;
+  width: 41px;
 }
 
 input[name='pkg'] {
@@ -178,12 +193,11 @@ input[name='pkg']:checked + label {
 }
 
 #features-card-1,
+.features-card-1-inner-wrapper,
 #features-card-2,
 #features-card-3,
 #features-card-4 {
-  /* background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%) */
-  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  border: 1px solid #992cc0;
+  /* border: 1px solid rgba(221, 221, 221, 0.07); */
   border-radius: 25px;
   background-position: right, center;
   background-repeat: no-repeat, no-repeat;
@@ -192,7 +206,7 @@ input[name='pkg']:checked + label {
 }
 
 #features-card-1 {
-  background-image: url('../img/card-1-bg.svg'), radial-gradient(circle, rgba(41, 12, 50, 1) 0%, rgba(31, 9, 38, 0.28) 100%);
+  background: linear-gradient(301deg, rgba(153, 44, 192, 0.5) 0%, rgba(15, 4, 19, 0.1) 25%, #0f0413 75%, rgba(153, 44, 192, 0.5) 100%);
 }
 
 #features-card-2 {
@@ -205,6 +219,13 @@ input[name='pkg']:checked + label {
 
 #features-card-4 {
   background-image: url('../img/card-4-bg.svg'), radial-gradient(circle, rgba(41, 12, 50, 1) 0%, rgba(31, 9, 38, 0.28) 100%);
+}
+
+.features-card-1-inner-wrapper {
+  background-image: url('../img/card-1-bg.svg'), radial-gradient(circle, rgba(41, 12, 50, 1) 0%, rgba(31, 9, 38, 1) 100%);
+  width: 99%;
+  height: 99%;
+  margin: 0px auto;
 }
 
 /********************************* 
@@ -233,6 +254,29 @@ input[name='pkg']:checked + label {
   width: 60%;
   margin: auto;
 }
+
+.hardware-section-inner-wrap,
+.location-section-inner-wrap,
+.plans-section-inner-wrap {
+  width: 99.5%;
+  height: 99%;
+
+  border-radius: 25px;
+  overflow: hidden;
+  background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
+  margin: auto;
+}
+
+#hardware-section-card,
+#location-section-card,
+#plans-section-card {
+  display: flex;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background: linear-gradient(301deg, rgba(153, 44, 192, 0.5) 0%, rgba(15, 4, 19, 0.1) 20%, #0f0413 80%, rgba(153, 44, 192, 0.5) 100%);
+}
+
 /********************************* 
 * Hardware Section End
 **********************************/
@@ -259,18 +303,19 @@ input[name='pkg']:checked + label {
   background-color: #290c32;
 }
 
-#hardware-section-card,
+/* #hardware-section-card, */
 #location-section-card,
 #plans-section-card {
   border-radius: 25px;
-  border: 1px solid #992cc0;
+  /* border: 3px solid transparent; */
 }
-#hardware-section-card {
+
+/* #location-section-card {
   background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
 }
 #plans-section-card {
   background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
-}
+} */
 
 .single-spec {
   margin: 30px;
@@ -354,7 +399,7 @@ input[name='pkg']:checked + label {
 * Footer Start
 **********************************/
 #footer {
-  background-image: url('../img/footer-bg.png');
+  background-image: url('../img/footer-bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -419,8 +464,33 @@ label.single-spec {
 /********************************* 
 * Plans Section End
 **********************************/
+.cursor {
+  top: 48px;
+  left: 8px;
+  position: relative;
+  margin: -60px 0px;
+}
 
-@media (min-width: 970px) {
+@media (min-width: 1400px) {
+  #hero-section-right {
+    position: relative;
+    right: unset;
+    margin-top: unset;
+    max-height: 40vh;
+  }
+
+  #hero-section {
+    padding-top: 100px !important;
+    padding-bottom: 0px !important;
+  }
+}
+@media (max-width: 992px) {
+  .values .value {
+    width: 8px;
+  }
+}
+
+@media (min-width: 992px) {
   #navbarSupportedContent {
     background: transparent !important;
   }
@@ -429,6 +499,19 @@ label.single-spec {
     position: relative;
     top: 50px;
   }
+
+  #hero-section-text {
+    /* padding-left: 7rem !important; */
+  }
+}
+
+@media (max-width: 768px) {
+  .cursor {
+    top: 12px;
+    left: 8px;
+    position: relative;
+    margin: -28px 0px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -436,4 +519,13 @@ label.single-spec {
     margin-left: 0px;
     margin-right: 0px;
   }
+}
+
+.line-with-headline {
+  width: 100px;
+  height: 10px;
+  border-top: solid 3px #fff;
+  display: inline-block;
+  position: relative;
+  top: 1px;
 }

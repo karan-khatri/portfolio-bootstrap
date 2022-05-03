@@ -110,23 +110,23 @@
     </header>
     <main>
       <div class="container-fluid p-0" id="hero-section">
-        <div class="container-xxl p-0 h-100">
+        <div class="container p-0 h-100">
           <div class="row h-100 m-auto">
-            <div class="col-12 col-sm-12 col-md-7 px-4 px-md-5 my-5 d-flex flex-column justify-content-center">
+            <div class="col-12 col-sm-12 col-md-7 d-flex flex-column justify-content-center" id="hero-section-text" style="">
               <h1 class="mb-5">Premium Minecraft Hosting at unbeatable prices.</h1>
               <p class="mb-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum orci, orci arcu. Urna est est ridiculus non. Venenatis hendrerit. Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit.
               </p>
               <div class="buttons">
-                <a href="#" class="btn btn-secondary me-5">ABOUT US <em class="bi bi-chevron-right"></em></a>
-                <a href="#" class="btn text-white">VIEW PLANS <em class="bi bi-chevron-right"></em></a>
+                <a href="#" class="btn btn-secondary me-5 mb-4 shadow-none">ABOUT US <em class="bi bi-chevron-right"></em></a>
+                <a href="#" class="btn text-white mb-4 shadow-none">VIEW PLANS <em class="bi bi-chevron-right"></em></a>
               </div>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-5 p-0">
-              <div class="img-container">
-                <img src="./assets/img/SynodicdznFinal.png" alt="" class="w-100" />
+            <div class="col-12 col-sm-12 col-md-5 p-0 d-none d-md-block" id="hero-section-right">
+              <div class="img-container d-flex h-100">
+                <img src="./assets/img/SynodicdznFinal.png" alt="" class="" />
               </div>
             </div>
           </div>
@@ -137,18 +137,26 @@
         <div class="container">
           <div class="row justify-content-around">
             <div class="col-12">
-              <h4>Features --------</h4>
+              <h4>
+                FEATURES
+                <div class="line-with-headline"></div>
+              </h4>
               <h1 class="primary-text-color">Why Nebula?</h1>
             </div>
-            <div class="col-12 col-sm-12 col-md-5 px-5 py-4 mb-5" id="features-card-1">
-              <div class="card-image-holder mb-3">
-                <img src="./assets/img/card1-img.svg" alt="" width="50" />
+            <div class="col-12 col-sm-12 col-md-5 mb-5 px-0 d-flex flex-column" id="features-card-1">
+              <div class="features-card-1-inner-wrapper px-5 py-4">
+                <div class="card-image-holder mb-3">
+                  <img src="./assets/img/card1-img.svg" alt="" width="50" />
+                </div>
+                <h5 class="mb-3">Swift Performance</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum integer orci, orci urna est arcu. Urna est est ridiculus non. Venenatis
+                  hendrerit.
+                </p>
               </div>
-              <h5 class="mb-3">Swift Performance</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum integer orci, orci urna est arcu. Urna est est ridiculus non. Venenatis
-                hendrerit.
-              </p>
+              <div class="cursor d-flex w-100">
+                <img src="./assets/img/cursor.svg" alt="" class="ms-auto" />
+              </div>
             </div>
 
             <div class="col-12 col-sm-12 col-md-5 px-5 py-4 mb-5" id="features-card-2">
@@ -187,18 +195,21 @@
         </div>
       </div>
 
-      <div class="container-fluid py-4" id="section-3">
+      <div class="container-fluid py-5" id="section-3">
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex flex-column justify-content-center">
-              <h4>DISCORD --------</h4>
+              <h4>
+                DISCORD
+                <div class="line-with-headline"></div>
+              </h4>
               <h1>Join our Discord</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum integer orci, orci arcu. Urna est est ridiculus non. Venenatis hendrerit.
               </p>
               <a href="#" class="btn join-discord-btn">Join Discord <em class="bi bi-chevron-right"></em></a>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 d-none d-lg-block">
               <div class="discord-img-container">
                 <img src="./assets/img/join-discord-img.png" alt="" />
               </div>
@@ -211,64 +222,69 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h4>SPECS --------</h4>
+              <h4>
+                SPECS
+                <div class="line-with-headline"></div>
+              </h4>
               <h1 class="primary-text-color">Powerful Hardware</h1>
             </div>
             <div class="col-12 px-0 overflow-hidden" id="hardware-section-card">
-              <div class="head-rect">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-cpu.svg" alt="CPU" class="" width="50" />
+              <div class="hardware-section-inner-wrap">
+                <div class="head-rect">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-cpu.svg" alt="CPU" class="" width="50" />
+                        </div>
+                        <div class="col-9">CPU - Ryzen 5 5900X*</div>
                       </div>
-                      <div class="col-9">CPU - Ryzen 5 5900X*</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-ram.svg" alt="RAM" width="50" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-ram.svg" alt="RAM" width="50" />
+                        </div>
+                        <div class="col-9">RAM - up to 16GB</div>
                       </div>
-                      <div class="col-9">RAM - up to 16GB</div>
-                    </div>
 
-                    <div class="row single-spec mb-0 mb-md-3">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-wifi.svg" alt="" width="50" />
+                      <div class="row single-spec mb-0 mb-md-3">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-wifi.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">Uplink - 1 Gbps</div>
                       </div>
-                      <div class="col-9">Uplink - 1 Gbps</div>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-protection.svg" alt="" width="50" />
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-protection.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">DDoS Protected</div>
                       </div>
-                      <div class="col-9">DDoS Protected</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-storage.svg" alt="" width="50" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-storage.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">Unmetered Storage</div>
                       </div>
-                      <div class="col-9">Unmetered Storage</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/hardware-location.svg" alt="" width="50" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/hardware-location.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">Located in Chicago</div>
                       </div>
-                      <div class="col-9">Located in Chicago</div>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-4">
-                    <div class="hardware-img-container">
-                      <img src="./assets/img/hardware-img.png" alt="tower" class="h-100" />
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                      <div class="hardware-img-container">
+                        <img src="./assets/img/hardware-img.png" alt="tower" class="h-100" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -282,81 +298,86 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h4>Locations --------</h4>
+              <h4>
+                LOCATIONS
+                <div class="line-with-headline"></div>
+              </h4>
               <h1 class="primary-text-color">Available Locations</h1>
             </div>
             <div class="col-12 px-0 overflow-hidden" id="location-section-card">
-              <div class="head-rect">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-1">
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-chicago-flag.svg" alt="" width="50" />
+              <div class="location-section-inner-wrap">
+                <div class="head-rect">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="container px-0">
+                  <div class="row px-2">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-1">
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-chicago-flag.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">Chicago, IL.</div>
                       </div>
-                      <div class="col-9">Chicago, IL.</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-chicago-operational.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-chicago-operational.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Operational</div>
                       </div>
-                      <div class="col-9">Operational</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-chicago-ping.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-chicago-ping.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Ping: 65ms</div>
                       </div>
-                      <div class="col-9">Ping: 65ms</div>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-2">
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-london-flag.svg" alt="" width="50" />
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-2">
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-london-flag.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">London, UK.</div>
                       </div>
-                      <div class="col-9">London, UK.</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-london-operational.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-london-operational.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Planned Maintenance @ 8PM EST</div>
                       </div>
-                      <div class="col-9">Planned Maintenance @ 8PM EST</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-london-ping.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-london-ping.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Ping: 328ms</div>
                       </div>
-                      <div class="col-9">Ping: 328ms</div>
                     </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-3">
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-sydeny-flag.svg" alt="" width="50" />
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 location-sec-col-3">
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-sydeny-flag.svg" alt="" width="50" />
+                        </div>
+                        <div class="col-9">Sydney, AU</div>
                       </div>
-                      <div class="col-9">Sydney, AU</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-sydeny-operational.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-sydeny-operational.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Coming Soon 22/02/2022</div>
                       </div>
-                      <div class="col-9">Coming Soon 22/02/2022</div>
-                    </div>
 
-                    <div class="row single-spec">
-                      <div class="col-3">
-                        <img src="./assets/img/location-sydeny-ping.svg" alt="" width="35" />
+                      <div class="row single-spec">
+                        <div class="col-3">
+                          <img src="./assets/img/location-sydeny-ping.svg" alt="" width="35" />
+                        </div>
+                        <div class="col-9">Ping: N/A</div>
                       </div>
-                      <div class="col-9">Ping: N/A</div>
                     </div>
                   </div>
                 </div>
@@ -369,145 +390,151 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h4>Plans --------</h4>
+              <h4>
+                PLANS
+                <div class="line-with-headline"></div>
+              </h4>
               <h1 class="primary-text-color">Available Plans</h1>
             </div>
             <form action="#">
               <div class="col-12 px-0 overflow-hidden" id="plans-section-card">
-                <div class="head-rect">
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="slidecontainer mt-5">
-                        <div class="values">
-                          <span class="value">1GB</span>
-                          <span class="value">2GB</span>
-                          <span class="value">3GB</span>
-                          <span class="value">4GB</span>
-                          <span class="value">5GB</span>
-                          <span class="value">6GB</span>
-                          <span class="value">7GB</span>
-                          <span class="value">8GB</span>
-                          <span class="value">9GB</span>
-                          <span class="value">10GB</span>
-                          <span class="value">11GB</span>
-                          <span class="value">12GB</span>
-                          <span class="value">13GB</span>
-                          <span class="value">14GB</span>
-                          <span class="value">15GB</span>
-                          <span class="value">16GB</span>
-                        </div>
-                        <div class="value-indicators">
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                          <div class="value-indicator"></div>
-                        </div>
-                        <input type="range" name="" id="" min="1" max="16" step="1" class="slider" />
-                      </div>
-                    </div>
+                <div class="plans-section-inner-wrap">
+                  <div class="head-rect">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
                   </div>
-
-                  <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <div class="row single-spec">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-ram.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">RAM - 1GB DDR4</div>
-                      </div>
-                      <div class="row single-spec mb-0 mb-md-3">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-cpu.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">CPU - Ryzen 5 5900X*</div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <div class="row single-spec">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-wifi.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">Uplink - 1 Gbps</div>
-                      </div>
-                      <div class="row single-spec mb-0 mb-md-3">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-protection.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">DDoS Protected</div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <div class="row single-spec">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-storage.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">Unmetered Storage</div>
-                      </div>
-                      <div class="row single-spec">
-                        <div class="col-3">
-                          <img src="./assets/img/hardware-location.svg" alt="" width="50" />
-                        </div>
-                        <div class="col-9">Located in Chicago</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <hr width="100%" height="1px" />
-
-                  <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <input type="radio" name="pkg" id="monthly-pkg" />
-                      <label for="monthly-pkg" class="single-spec my-0 my-lg-4">
-                        <div class="row">
-                          <div class="col-3">
-                            <img src="./assets/img/monthly-pkg.png" alt="" width="50" />
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="slidecontainer mt-5">
+                          <h5 class="d-block d-lg-none mb-3 text-center">RAM</h5>
+                          <div class="values">
+                            <span class="value d-none d-lg-inline-block">1<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">2<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">3<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">4<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">5<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">6<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">7<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">8<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">9<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">10<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">11<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">12<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">13<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">14<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value d-none d-lg-inline-block">15<span class="d-none d-lg-inline-block">GB</span></span>
+                            <span class="value">16<span class="d-none d-lg-inline-block">GB</span></span>
                           </div>
-                          <div class="col-9">$3.00 per month</div>
+                          <div class="value-indicators">
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                            <div class="value-indicator d-none d-lg-inline-block"></div>
+                            <div class="value-indicator"></div>
+                          </div>
+                          <input type="range" name="" id="ram-range-slider" min="1" max="16" step="1" class="slider" />
                         </div>
-                      </label>
+                      </div>
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <input type="radio" name="pkg" id="quaterly-pkg" />
-                      <label for="quaterly-pkg" class="single-spec my-0 my-lg-4">
-                        <div class="row">
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="row single-spec">
                           <div class="col-3">
-                            <img src="./assets/img/quaterly-pjg.svg" alt="" width="50" />
+                            <img src="./assets/img/hardware-ram.svg" alt="" width="50" />
                           </div>
-                          <div class="col-9">$9.00 per quarter</div>
+                          <div class="col-9">RAM - 1GB DDR4</div>
                         </div>
-                      </label>
+                        <div class="row single-spec mb-0 mb-md-3">
+                          <div class="col-3">
+                            <img src="./assets/img/hardware-cpu.svg" alt="" width="50" />
+                          </div>
+                          <div class="col-9">CPU - Ryzen 5 5900X*</div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="row single-spec">
+                          <div class="col-3">
+                            <img src="./assets/img/hardware-wifi.svg" alt="" width="50" />
+                          </div>
+                          <div class="col-9">Uplink - 1 Gbps</div>
+                        </div>
+                        <div class="row single-spec mb-0 mb-md-3">
+                          <div class="col-3">
+                            <img src="./assets/img/hardware-protection.svg" alt="" width="50" />
+                          </div>
+                          <div class="col-9">DDoS Protected</div>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="row single-spec">
+                          <div class="col-3">
+                            <img src="./assets/img/hardware-storage.svg" alt="" width="50" />
+                          </div>
+                          <div class="col-9">Unmetered Storage</div>
+                        </div>
+                        <div class="row single-spec">
+                          <div class="col-3">
+                            <img src="./assets/img/hardware-location.svg" alt="" width="50" />
+                          </div>
+                          <div class="col-9">Located in Chicago</div>
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                      <input type="radio" name="pkg" id="yearly-pkg" />
-                      <label for="yearly-pkg" class="single-spec mt-0 my-lg-4">
-                        <div class="row">
-                          <div class="col-3">
-                            <img src="./assets/img/yearly-pkg.png" alt="" width="50" />
+                    <hr width="100%" height="1px" />
+
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <input type="radio" name="pkg" id="monthly-pkg" />
+                        <label for="monthly-pkg" class="single-spec my-0 my-lg-4">
+                          <div class="row">
+                            <div class="col-3">
+                              <img src="./assets/img/monthly-pkg.png" alt="" width="50" />
+                            </div>
+                            <div class="col-9">$3.00 per month</div>
                           </div>
-                          <div class="col-9">$36.00 per year</div>
-                        </div>
-                      </label>
+                        </label>
+                      </div>
+
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <input type="radio" name="pkg" id="quaterly-pkg" />
+                        <label for="quaterly-pkg" class="single-spec my-0 my-lg-4">
+                          <div class="row">
+                            <div class="col-3">
+                              <img src="./assets/img/quaterly-pjg.svg" alt="" width="50" />
+                            </div>
+                            <div class="col-9">$9.00 per quarter</div>
+                          </div>
+                        </label>
+                      </div>
+
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <input type="radio" name="pkg" id="yearly-pkg" />
+                        <label for="yearly-pkg" class="single-spec mt-0 my-lg-4">
+                          <div class="row">
+                            <div class="col-3">
+                              <img src="./assets/img/yearly-pkg.png" alt="" width="50" />
+                            </div>
+                            <div class="col-9">$36.00 per year</div>
+                          </div>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -524,7 +551,7 @@
       <div class="container-fluid py-5" id="footer">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 d-flex flex-column justify-content-center mb-5 mb-md-0 mt-4 mt-md-0">
+            <div class="col-12 col-sm-12 col-md-5 d-flex flex-column justify-content-center mb-5 mb-md-0 mt-4 mt-md-0">
               <div class="brand mb-3 fw-bold">
                 <img src="./assets/img/svg/logo-white.svg" alt="" width="40" />
                 NebulaNode
@@ -534,71 +561,71 @@
                 molestie.
               </p>
             </div>
-            <div class="col-12 col-sm-12 col-md-6">
+            <div class="col-12 col-sm-12 col-md-7">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
                   <h6 class="mb-3">USEFUL LINKS</h6>
                   <div class="row single-useful-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/useful-links-1-1.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none"> Minecraft Hosting</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none"> Minecraft Hosting</a></div>
                   </div>
                   <div class="row single-useful-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/useful-links-1-2.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Our Team</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Our Team</a></div>
                   </div>
                   <div class="row single-useful-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/useful-links1-3.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Status</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Status</a></div>
                   </div>
                   <div class="row single-useful-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/useful-links1-4.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Contact US</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Contact US</a></div>
                   </div>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
                   <h6 class="mb-3">Connect</h6>
                   <div class="row single-connect-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/connect1-1.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Facebook</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Facebook</a></div>
                   </div>
                   <div class="row single-connect-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/connect1-2.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Instagram</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Instagram</a></div>
                   </div>
                   <div class="row single-connect-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/connect1-3.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Messenger</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Messenger</a></div>
                   </div>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                   <h6 class="mb-3">LEGAL</h6>
                   <div class="row single-legal-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/legal1-1.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Terms of Service</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Terms of Service</a></div>
                   </div>
                   <div class="row single-legal-link">
-                    <div class="col-3">
+                    <div class="col-2">
                       <img src="./assets/img/legal1-1.svg" alt="" />
                     </div>
-                    <div class="col-9"><a href="" class="link-light text-decoration-none">Privacy Policy</a></div>
+                    <div class="col-10"><a href="" class="link-light text-decoration-none">Privacy Policy</a></div>
                   </div>
                 </div>
               </div>
@@ -607,5 +634,6 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
