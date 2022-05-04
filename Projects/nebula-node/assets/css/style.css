@@ -52,7 +52,6 @@ body {
 * Hero Section Start
 **********************************/
 #hero-section {
-  /* height: 90vh; */
   background-image: url('../img/hero-background.png'), url('../img/hero-background-2.png'), url('../img/hero-background-2.png');
   background-position: center, top, top;
   background-size: cover, cover, cover;
@@ -65,14 +64,14 @@ body {
 #hero-section-right {
   position: absolute;
   right: 0px;
-  /* margin-top: -70px; */
+  margin-top: -50px;
   max-height: 40vh;
 }
 
 #hero-section-right .img-container img {
   max-width: 100% !important;
   margin-left: auto;
-  max-height: 50vh;
+  max-height: 90vh;
   width: auto !important;
 }
 
@@ -158,15 +157,13 @@ body {
 
 input[name='pkg'] {
   display: none;
-} /* hide radio buttons */
+}
 input[name='pkg'] + label {
   display: inline-block;
   cursor: pointer;
 }
 
 input[name='pkg'] + label {
-  /* box with rounded corner */
-  /* border: 1px solid #999; */
   padding: 10px 12px;
   border-radius: 25px;
   position: relative;
@@ -197,7 +194,6 @@ input[name='pkg']:checked + label {
 #features-card-2,
 #features-card-3,
 #features-card-4 {
-  /* border: 1px solid rgba(221, 221, 221, 0.07); */
   border-radius: 25px;
   background-position: right, center;
   background-repeat: no-repeat, no-repeat;
@@ -223,8 +219,8 @@ input[name='pkg']:checked + label {
 
 .features-card-1-inner-wrapper {
   background-image: url('../img/card-1-bg.svg'), radial-gradient(circle, rgba(41, 12, 50, 1) 0%, rgba(31, 9, 38, 1) 100%);
-  width: 99%;
-  height: 99%;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
   margin: 0px auto;
 }
 
@@ -258,9 +254,8 @@ input[name='pkg']:checked + label {
 .hardware-section-inner-wrap,
 .location-section-inner-wrap,
 .plans-section-inner-wrap {
-  width: 99.5%;
-  height: 99%;
-
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
   border-radius: 25px;
   overflow: hidden;
   background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
@@ -272,7 +267,6 @@ input[name='pkg']:checked + label {
 #plans-section-card {
   display: flex;
   width: 100%;
-  border-radius: 25px;
   overflow: hidden;
   background: linear-gradient(301deg, rgba(153, 44, 192, 0.5) 0%, rgba(15, 4, 19, 0.1) 20%, #0f0413 80%, rgba(153, 44, 192, 0.5) 100%);
 }
@@ -303,19 +297,11 @@ input[name='pkg']:checked + label {
   background-color: #290c32;
 }
 
-/* #hardware-section-card, */
+#hardware-section-card,
 #location-section-card,
 #plans-section-card {
   border-radius: 25px;
-  /* border: 3px solid transparent; */
 }
-
-/* #location-section-card {
-  background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
-}
-#plans-section-card {
-  background: radial-gradient(127.84% 127.84% at 83.56% 24.52%, #290c32 0%, rgba(31, 9, 38, 0.28) 100%);
-} */
 
 .single-spec {
   margin: 30px;
@@ -360,8 +346,6 @@ input[name='pkg']:checked + label {
 
 #section-3 {
   background: radial-gradient(71.28% 293.04% at 22.24% 19.13%, #3d144a 0%, rgba(67, 32, 78, 0.28) 100%);
-  /* padding-top: 70px !important;
-  padding-bottom: 70px !important; */
 }
 
 .discord-img-container {
@@ -464,12 +448,6 @@ label.single-spec {
 /********************************* 
 * Plans Section End
 **********************************/
-.cursor {
-  top: 48px;
-  left: 8px;
-  position: relative;
-  margin: -60px 0px;
-}
 
 @media (min-width: 1400px) {
   #hero-section-right {
@@ -498,19 +476,6 @@ label.single-spec {
   .values .value:nth-child() {
     position: relative;
     top: 50px;
-  }
-
-  #hero-section-text {
-    /* padding-left: 7rem !important; */
-  }
-}
-
-@media (max-width: 768px) {
-  .cursor {
-    top: 12px;
-    left: 8px;
-    position: relative;
-    margin: -28px 0px;
   }
 }
 
