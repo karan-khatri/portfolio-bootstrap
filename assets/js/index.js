@@ -66,14 +66,14 @@ var pbar1 = new ProgressBar.Circle('.pb1', {
     if (value === 0) {
       circle.setText('');
     } else {
-      circle.setText('HTML <br/>' + value);
+      circle.setText('Front End<br/>Development<br/>' + value + '%');
     }
   },
 });
 pbar1.text.style.fontFamily = '"Poppins", sans-serif';
 pbar1.text.style.fontSize = '2rem';
 
-pbar1.animate(0.85);
+pbar1.animate(1);
 
 /*****************************
  * Progress Bar Code End
@@ -104,14 +104,14 @@ var pbar2 = new ProgressBar.Circle('.pb2', {
     if (value === 0) {
       circle.setText('');
     } else {
-      circle.setText('CSS <br/>' + value);
+      circle.setText('Back-End<br/>Development <br/>' + value + '%');
     }
   },
 });
 pbar2.text.style.fontFamily = '"Poppins", sans-serif';
 pbar2.text.style.fontSize = '2rem';
 
-pbar2.animate(0.85);
+pbar2.animate(0.9);
 
 /*****************************
  * Progress Bar Code End
@@ -142,7 +142,7 @@ var pbar3 = new ProgressBar.Circle('.pb3', {
     if (value === 0) {
       circle.setText('');
     } else {
-      circle.setText('JavaScript <br/>' + value);
+      circle.setText('MERN Stack<br/>' + value + '%');
     }
   },
 });
