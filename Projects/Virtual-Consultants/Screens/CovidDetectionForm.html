@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid Detection Form</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <h3 class="text-center">Covid 19 Detection Form</h3>
+          <form action="" method="post">
+            <div class="mb-3">
+              <label for="" class="form-label">Upload an Image:</label>
+              <input type="file" name="image" id="" accept="iamge/*" />
+            </div>
+
+            <div class="mb-3">
+              <label for="">Gender</label>
+              <select name="Gender" class="form-select" aria-label="Default select example">
+                <option selected>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Age Above 60:</label>
+              <select name="Age_Above_60" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Cough:</label>
+              <select name="Cough" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Shortness of Breath:</label>
+              <select name="Shortness_of_breadth" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Fever:</label>
+              <select name="Fever" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Sore Throat:</label>
+              <select name="Sore_throat" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Headache:</label>
+              <select name="Headache" class="form-select" aria-label="Default select example">
+                <option selected>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Test Indication:</label>
+              <select name="Test_Indication" class="form-select" aria-label="Default select example">
+                <option>Contact with Confirmed</option>
+                <option>Abroad</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3 text-center">
+              <button class="btn btn-primary mt-4 w-50" type="submit">Predict</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

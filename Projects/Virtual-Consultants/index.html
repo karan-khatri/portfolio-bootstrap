@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Consultant</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap'); */
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+      :root {
+        --swiper-navigation-size: 'auto';
+      }
+
+      .modal {
+        --bs-modal-width: 700px !important;
+      }
+
+      * {
+        font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+      }
+
+      .hero-swiper-slide {
+        height: calc(100vh - 56px);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      button,
+      a {
+        text-transform: capitalize;
+      }
+
+      .card-img img {
+        width: 100px;
+        margin-bottom: 25px;
+      }
+
+      .profile-picture-holder {
+        text-align: center;
+      }
+      .swiper-button-next.team-swiper-button-next::after,
+      .swiper-button-prev.team-swiper-button-prev::after {
+        content: '';
+      }
+
+      .profile-card {
+        transition: all 400ms;
+      }
+
+      .profile-card:hover {
+        transform: scale(1.2);
+      }
+
+      .hero-swiper-slide::before {
+        content: '';
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* z-index: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#amnaProfileModal">Trigger Karan's Profile</button> -->
+
+    <!-- Shabana Profile Modal -->
+    <div
+      class="modal fade"
+      id="shabanaProfileModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Member Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 p-5">
+                  <img src="./assets/images/icons/favatar.png" alt="favatar" width="100%" />
+                </div>
+                <div class="col-6">
+                  <h1 class="text-primary fw-bold mb-0">Shabana Karan</h1>
+                  <p class="text-danger">Group Leader</p>
+
+                  <p class="text-secondary"><span class="text-dark fw-bold">Contribution: </span> Something Something</p>
+
+                  <p class="text-secondary">
+                    <span class="text-dark fw-bold">About her: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quod cum obcaecati
+                    voluptatum. Minima enim dolore cupiditate magni distinctio possimus dignissimos temporibus neque deserunt quasi aliquam nulla, est illum
+                    similique maiores tempora cumque pariatur ad rerum perspiciatis? Architecto quod, aspernatur a blanditiis minima nulla iste maiores
+                    perferendis quae veritatis!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Karan Profile Modal -->
+    <div
+      class="modal fade"
+      id="karanProfileModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Member Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 p-5">
+                  <img src="./assets/images/icons/mavatar.png" alt="favatar" width="100%" />
+                </div>
+                <div class="col-6">
+                  <h1 class="text-primary fw-bold mb-0">Karan Kumar</h1>
+                  <p class="text-danger">Assistant Group Leader</p>
+
+                  <p class="text-secondary"><span class="text-dark fw-bold">Contribution: </span> Something Something</p>
+
+                  <p class="text-secondary">
+                    <span class="text-dark fw-bold">About him: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quod cum obcaecati
+                    voluptatum. Minima enim dolore cupiditate magni distinctio possimus dignissimos temporibus neque deserunt quasi aliquam nulla, est illum
+                    similique maiores tempora cumque pariatur ad rerum perspiciatis? Architecto quod, aspernatur a blanditiis minima nulla iste maiores
+                    perferendis quae veritatis!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amna Profile Modal -->
+    <div
+      class="modal fade"
+      id="amnaProfileModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Member Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 p-5">
+                  <img src="./assets/images/icons/favatar.png" alt="favatar" width="100%" />
+                </div>
+                <div class="col-6">
+                  <h1 class="text-primary fw-bold mb-0">Amna Memon</h1>
+                  <p class="text-danger">Assistant Group Leader</p>
+
+                  <p class="text-secondary"><span class="text-dark fw-bold">Contribution: </span> Something Something</p>
+
+                  <p class="text-secondary">
+                    <span class="text-dark fw-bold">About her: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quod cum obcaecati
+                    voluptatum. Minima enim dolore cupiditate magni distinctio possimus dignissimos temporibus neque deserunt quasi aliquam nulla, est illum
+                    similique maiores tempora cumque pariatur ad rerum perspiciatis? Architecto quod, aspernatur a blanditiis minima nulla iste maiores
+                    perferendis quae veritatis!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mujeeb Profile Modal -->
+    <div
+      class="modal fade"
+      id="mujeebProfileModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Member Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 p-5">
+                  <img src="./assets/images/icons/mavatar.png" alt="favatar" width="100%" />
+                </div>
+                <div class="col-6">
+                  <h1 class="text-primary fw-bold mb-0">Mujeeb Ur Rehman</h1>
+                  <p class="text-danger">Group Leader</p>
+
+                  <p class="text-secondary"><span class="text-dark fw-bold">Contribution: </span> Something Something</p>
+
+                  <p class="text-secondary">
+                    <span class="text-dark fw-bold">About him: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quod cum obcaecati
+                    voluptatum. Minima enim dolore cupiditate magni distinctio possimus dignissimos temporibus neque deserunt quasi aliquam nulla, est illum
+                    similique maiores tempora cumque pariatur ad rerum perspiciatis? Architecto quod, aspernatur a blanditiis minima nulla iste maiores
+                    perferendis quae veritatis!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Farhad Profile Modal -->
+    <div
+      class="modal fade"
+      id="farhadProfileModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Member Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6 p-5">
+                  <img src="./assets/images/icons/mavatar.png" alt="favatar" width="100%" />
+                </div>
+                <div class="col-6">
+                  <h1 class="text-primary fw-bold mb-0">Farhad Ali</h1>
+                  <p class="text-danger">Group Member</p>
+
+                  <p class="text-secondary"><span class="text-dark fw-bold">Contribution: </span> Something Something</p>
+
+                  <p class="text-secondary">
+                    <span class="text-dark fw-bold">About him: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius modi quod cum obcaecati
+                    voluptatum. Minima enim dolore cupiditate magni distinctio possimus dignissimos temporibus neque deserunt quasi aliquam nulla, est illum
+                    similique maiores tempora cumque pariatur ad rerum perspiciatis? Architecto quod, aspernatur a blanditiis minima nulla iste maiores
+                    perferendis quae veritatis!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+
+
+
+
+
+
+     -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> Virtual Consultant </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Heart Disease Prediction</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Covid-19 Detection</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">about us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">team</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+          </ul>
+          <ul class="d-flex list-unstyled mb-0">
+            <li class="nav-item me-3">
+              <a href="#" class="link-dark"> <i class="bi bi-facebook fs-4"></i></a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="#" class="link-dark"> <i class="bi bi-twitter fs-4"></i></a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="#" class="link-dark"> <i class="bi bi-whatsapp fs-4"></i></a>
+            </li>
+            <li class="nav-item me-3">
+              <a href="#" class="link-dark"> <i class="bi bi-linkedin fs-4"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide hero-swiper-slide">
+          <div
+            class="background h-100 text-center text-white"
+            style="background-image: url(./assets/images/Covid.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center"
+          >
+            <div class="swiper-slide-content position-absolute w-100" data-aos="zoom-in-down" style="bottom: 50px">
+              <h1 class="mb-4">covid-19 detection</h1>
+              <p class="mb-4 mx-auto" style="max-width: 50%">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi distinctio numquam in quo deserunt laborum facilis totam enim
+                inventore?
+              </p>
+              <a href="./Screens/HeartDiseaseForm.html" class="btn btn-outline-primary">click here</a>
+            </div>
+            <!-- <img src="./assets/images/Covid.jpeg" alt="" class="w-100 h-100" /> -->
+          </div>
+        </div>
+        <div class="swiper-slide hero-swiper-slide">
+          <div
+            class="background h-100 text-center text-white"
+            style="background-image: url(./assets/images/heart.jpeg); background-repeat: no-repeat; background-size: cover; background-position: center"
+          >
+            <div class="swiper-slide-content position-absolute w-100" data-aos="zoom-in-down" style="bottom: 50px">
+              <h1 class="mb-4">covid-19 detection</h1>
+              <p class="mb-4 mx-auto" style="max-width: 50%">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi distinctio numquam in quo deserunt laborum facilis totam enim
+                inventore?
+              </p>
+              <a href="./Screens/CovidDetectionForm.html" class="btn btn-outline-primary">click here</a>
+            </div>
+            <!-- <img src="./assets/images/heart.jpeg" alt="" class="w-100 h-100" /> -->
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next bg-white text-black rounded-circle fw-bold" style="width: 35px; height: 35px"></div>
+      <div class="swiper-button-prev bg-white text-black rounded-circle fw-bold" style="width: 35px; height: 35px"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="container pt-3">
+      <div class="row my-4">
+        <div class="col-12"><h1 class="text-center fw-bold">our services</h1></div>
+      </div>
+      <div class="row my-5">
+        <div class="col-12 col-sm-6 col-md-4 px-md-3 mb-4">
+          <div class="card shadow mx-auto rounded-4 h-100 p-4" data-aos="zoom-in-down">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img src="./assets/images/icons/heart-disease-icon.png" alt="" class="" />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Heart Disease Prediction</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="./Screens/HeartDiseaseForm.html" class="btn btn-outline-primary">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 px-md-3 mb-4">
+          <div class="card shadow mx-auto rounded-4 h-100 p-4" data-aos="zoom-in-down">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img src="./assets/images/icons/covid_icon.png" alt="" class="" />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">covid-19 detection</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="./Screens/CovidDetectionForm.html" class="btn btn-outline-primary">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 px-md-3 mb-4">
+          <div class="card shadow mx-auto rounded-4 h-100 p-4" data-aos="zoom-in-down">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img src="./assets/images/icons/cancer_icon.png" alt="" class="" />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Something</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-primary">click here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mb-4 fw-bold text-center">about us</h1>
+        </div>
+        <div class="d-none d-sm-block col-6">
+          <img src="./assets/images/about-us.svg" alt="" width="230px" />
+        </div>
+        <div class="col-12 col-sm-6">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta tempora voluptates enim natus amet tenetur nobis? Esse eum, dolorem
+            illum mollitia aperiam quam architecto omnis praesentium suscipit doloribus consectetur repudiandae nobis? Quos voluptate assumenda atque ipsum
+            necessitatibus ea? Reprehenderit dolores, iste consequuntur repellat aut ab nisi perferendis voluptate? Eius? Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Praesentium impedit tenetur consequuntur corporis aut dolorem necessitatibus nostrum iure dolorum? Voluptatum harum
+            voluptatibus, minima fugit numquam expedita nulla sit modi doloribus quaerat voluptatem sed cumque nam consectetur iste illo. Natus reprehenderit
+            qui aliquam dicta voluptatum magnam laboriosam fugit beatae consequuntur deserunt.
+          </p>
+          <a href="#" class="btn btn-outline-primary">click here</a>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center fw-bold">Upcoming Services</h1>
+        </div>
+      </div>
+      <div class="row justify-content-evenly mb-5 mt-4 pt-5">
+        <div class="col-12 col-md-6 col-lg-3 py-0 pb-5 pt-md-0 py-lg-0">
+          <div class="card bg-primary text-white h-100 mx-auto px-3 pt-5 position-relative" data-aos="zoom-in-down" style="border-radius: 20px 50px 20px 50px">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/brain_tumor_icon.jpg"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Brain Tumor</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-light">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 py-5 pb-sm-5 pt-md-0 py-lg-0">
+          <div
+            class="card bg-warning text-white h-100mx-auto px-3 pt-5 pb- position-relative"
+            data-aos="zoom-in-down"
+            style="border-radius: 20px 50px 20px 50px"
+          >
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/cancer_icon.png"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">cancer detection</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-light">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 py-5 pb-sm-5 mp-md-5 py-lg-0">
+          <div
+            class="card bg-success text-white h-100 mx-auto px-3 pt-5 pb- position-relative"
+            data-aos="zoom-in-down"
+            style="border-radius: 20px 50px 20px 50px"
+          >
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/liver_icon.jpg"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Liver Disease</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-light">click here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-evenly pt-4 mb-5">
+        <div class="col-12 col-md-6 col-lg-3 py-0 pb-5 pt-md-0 py-lg-0">
+          <div class="card bg-danger text-white h-100 mx-auto px-3 pt-5 position-relative" data-aos="zoom-in-down" style="border-radius: 20px 50px 20px 50px">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/eye_icon.jpg"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Eye Disease</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-light">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 py-5 pb-sm-5 pt-md-0 py-lg-0">
+          <div class="card bg-light h-100 mx-auto px-3 pt-5 pb- position-relative" data-aos="zoom-in-down" style="border-radius: 20px 50px 20px 50px">
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/skin_icon.jpg"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Skin Diseases</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-secondary">click here</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 py-5 pb-sm-5 mp-md-5 py-lg-0">
+          <div
+            class="card bg-secondary text-white h-100 mx-auto px-3 pt-5 pb- position-relative"
+            data-aos="zoom-in-down"
+            style="border-radius: 20px 50px 20px 50px"
+          >
+            <div class="card-body text-center">
+              <div class="card-img">
+                <img
+                  src="./assets/images/icons/Diabetes_icon.jpg"
+                  alt=""
+                  class="position-absolute mx-auto start-0 end-0 rounded-4"
+                  style="top: -50px"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+              <h4 class="card-title mb-4 fw-bold">Diabities</h4>
+              <p class="card-text small">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda odit deleniti. Voluptates tempore ducimus quia quaerat iure doloremque
+                illo!
+              </p>
+              <a href="#" class="btn btn-outline-light">click here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="container-fluid pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"><h1 class="fw-bold text-center">Our Team</h1></div>
+
+          <div class="col-12">
+            <div class="swiper teamSwiper py-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-picture-holder">
+                      <img src="./assets/images/icons/favatar.png" alt="" class="m-auto" width="200px" height="200px" />
+                    </div>
+                    <div class="profile-info">
+                      <h3 class="text-center fw-normal mb-2">
+                        <a href="#" class="link-primary" data-bs-toggle="modal" data-bs-target="#amnaProfileModal">Amna</a>
+                      </h3>
+                      <p class="text-center mb-0">GL</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-picture-holder">
+                      <img src="./assets/images/icons/favatar.png" alt="" class="m-auto" width="200px" height="200px" />
+                    </div>
+                    <div class="profile-info">
+                      <h3 class="text-center fw-normal mb-2">
+                        <a href="#" class="link-primary" data-bs-toggle="modal" data-bs-target="#shabanaProfileModal">Shabana</a>
+                      </h3>
+                      <p class="text-center mb-0">Member</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-picture-holder">
+                      <img src="./assets/images/icons/mavatar.png" alt="" class="m-auto" width="200px" height="200px" />
+                    </div>
+                    <div class="profile-info">
+                      <h3 class="text-center fw-normal mb-2">
+                        <a href="#" class="link-warning" data-bs-toggle="modal" data-bs-target="#karanProfileModal">Karan</a>
+                      </h3>
+                      <p class="text-center mb-0">Member</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-picture-holder">
+                      <img src="./assets/images/icons/mavatar.png" alt="" class="m-auto" width="200px" height="200px" />
+                    </div>
+                    <div class="profile-info">
+                      <h3 class="text-center fw-normal mb-2">
+                        <a href="#" class="link-warning" data-bs-toggle="modal" data-bs-target="#farhadProfileModal">Farhad</a>
+                      </h3>
+                      <p class="text-center mb-0">AGL</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-picture-holder">
+                      <img src="./assets/images/icons/mavatar.png" alt="" class="m-auto" width="200px" height="200px" />
+                    </div>
+                    <div class="profile-info">
+                      <h3 class="text-center fw-normal mb-2">
+                        <a href="#" class="link-warning" data-bs-toggle="modal" data-bs-target="#mujeebProfileModal">Mujeeb</a>
+                      </h3>
+                      <p class="text-center mb-0">Member</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-button-next team-swiper-button-next d-inline-flex justify-content-center align-items-center bg-danger rounded-circle"
+                style="width: 35px; height: 35px"
+              >
+                <span><em class="bi bi-chevron-right text-warning"></em></span>
+              </div>
+              <div
+                class="swiper-button-prev team-swiper-button-prev d-inline-flex justify-content-center align-items-center bg-danger rounded-circle"
+                style="width: 35px; height: 35px"
+              >
+                <span><em class="bi bi-chevron-left text-warning"></em></span>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-primary">
+      <div class="container">
+        <div class="row pt-3 pb-3 text-light">
+          <div class="col-12 col-md-4 col-lg-6 pt-2">
+            <h3 class="text-3xl mb-3">Virtual Consultants</h3>
+            <p style="width: 85%">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem non dolorum maxime quibusdam nostrum. Fugiat rem deleniti sed laudantium pariatur
+              quis vitae possimus.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 pt-2">
+            <h3 class="text-3xl mb-3">Important Links</h3>
+            <p>
+              <a href="#" class="text-decoration-none link-light">Home</a><br />
+              <a href="#" class="text-decoration-none link-light">About Us</a><br />
+              <a href="#" class="text-decoration-none link-light">Contact Us</a><br />
+              <a href="#" class="text-decoration-none link-light">Services</a>
+            </p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 pt-2">
+            <h3 class="text-3xl mb-3">Contact US</h3>
+            <p>
+              <i class="bi bi-geo-alt me-3"></i> Hala New Sindh Pakistan <br />
+              <i class="bi bi-telephone me-3"></i> +923013590799 <br />
+              <i class="bi bi-envelope-open me-3"></i> xyz@gmail.com <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row text-center bg-secondary text-white">
+        <div class="col-12 text-2xl p-2">&copy; Copyright 1990-2022 to Virtual Consultants</div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      const teamSwiper = new Swiper('.teamSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 5,
+
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          991: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+        },
+        loop: true,
+
+        centeredSlides: true,
+
+        pagination: {
+          el: '.team-swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.team-swiper-button-next',
+          prevEl: '.team-swiper-button-prev',
+        },
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+  </body>
+</html>
