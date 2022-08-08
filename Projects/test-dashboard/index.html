@@ -29,9 +29,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid min-vh-100">
       <div class="row">
-        <div class="col-1 bg-white text-center rounded-3 py-4 px-0">
+        <div class="col-2 col-md-1 bg-white text-center rounded-3 py-4 px-0">
           <div class="profile mb-5">
             <a href="#">
               <img src="./assets/img/Avatar.png" alt="avatar" class="profile-avatar" width="48" height="48" />
@@ -63,10 +63,10 @@
             </div>
           </div>
         </div>
-        <div class="col-7 mb-4">
+        <div class="col-10 col-md-7 mb-4">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-12 rounded-3 bg-white px-4 py-3">
+              <div class="col-12 rounded-3 bg-white px-4 py-3 mt-3">
                 <div class="d-flex justify-content-between">
                   <h4 class="heading-text">Test <span class="text-primary"> - 01</span></h4>
                   <button class="btn btn-primary border-0"><em class="bi bi-box-arrow-right me-2"></em> Logout</button>
@@ -124,7 +124,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 bg-white rounded-3 px-4 mb-4">
+        <div class="d-none d-md-block col-4 bg-white rounded-3 px-4 mb-4">
           <div class="row px-0 pause-end-button-container">
             <div class="d-flex justify-content-between px-3 py-4">
               <button class="btn btn-warning bg-warning bg-opacity-10 text-warning fw-bold border-0"><em class="bi bi-pause-circle-fill"></em> Pause</button>
@@ -140,10 +140,12 @@
           </div>
           <div class="row border-bottom px-3 py-4">
             <div class="col-12">
-              <span class="icon me-3 bg-success bg-opacity-10 rounded-3 p-2 me-3">
-                <img src="./assets/img/resultsGreen.svg" alt="" />
-              </span>
-              <p class="heading-text d-inline-block fw-bold mb-4">Performance on Last 10 Questions</p>
+              <p class="heading-text fw-bold mb-3">
+                <span class="icon me-3 bg-success bg-opacity-10 rounded-3 p-2 me-3">
+                  <em class="bi bi-bar-chart-fill icons align-middle"></em>
+                </span>
+                Performance on Last 10 Questions
+              </p>
               <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="progress">
                   <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>

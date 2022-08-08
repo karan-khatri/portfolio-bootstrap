@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KK Coding - About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/79be6dfd0b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="slideout-menu">
+      <ul>
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="./bloglist.html">Blog</a>
+        </li>
+
+        <li>
+          <a href="./projectlist.html">Projects</a>
+        </li>
+
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+
+        <li>
+          <input type="text" placeholder="Search here" />
+        </li>
+      </ul>
+    </div>
+    <nav>
+      <div id="logo-img">
+        <a href="#">
+          <img src="../assets/img/Logov4.png" alt="KKCoding Logo" />
+        </a>
+      </div>
+      <div id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="./bloglist.html">Blog</a>
+        </li>
+
+        <li>
+          <a href="./projectlist.html">Projects</a>
+        </li>
+
+        <li>
+          <a class="active" href="./about.html">About</a>
+        </li>
+        <li>
+          <div id="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="searchbox">
+      <input type="text" placeholder="Search here" />
+    </div>
+
+    <main>
+      <h2 class="page-heading">About KK Coding</h2>
+      <div id="post-container">
+        <section id="blogpost">
+          <div class="card">
+            <div class="card-image">
+              <img src="../assets/img/1.jpg" />
+            </div>
+            <div class="card-description">
+              <h3>The Introduction</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nostrum deserunt architecto cumque blanditiis alias possimus ex, distinctio
+                corporis eum tempore minima ipsum quae impedit magni excepturi eius? At, architecto?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nostrum deserunt architecto cumque blanditiis alias possimus ex, distinctio
+                corporis eum tempore minima ipsum quae impedit magni excepturi eius? At, architecto?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nostrum deserunt architecto cumque blanditiis alias possimus ex, distinctio
+                corporis eum tempore minima ipsum quae impedit magni excepturi eius? At, architecto?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <aside id="sidebar">
+          <h3>Contact Form</h3>
+          <div id="contact-form-container">
+            <form action="contactForm.php" method="post" id="contact-form">
+              <label for="" class="label">Name:</label>
+              <input type="text" name="textName" id="name" required />
+              <label for="" class="label">Email:</label>
+              <input type="text" name="textEmail" id="email" required />
+              <label for="" class="contactNumber">Contact Number</label>
+              <input type="text" name="number" id="contactNum" required />
+              <label for="" class="label">Message</label>
+              <textarea name="textMessage" class="message" id="message" rows="4" required></textarea>
+
+              <button type="submit" class="submitButton">Submit</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div id="left-footer">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+
+            <li>
+              <a href="#">About</a>
+            </li>
+
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+
+            <li>
+              <a href="#">Blogs</a>
+            </li>
+
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="right-footer">
+          <h3>Follow us on</h3>
+          <div id="social-media-footer">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <p>This website is developed by Team Halais</p>
+        </div>
+      </footer>
+    </main>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

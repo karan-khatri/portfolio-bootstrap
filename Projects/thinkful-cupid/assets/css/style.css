@@ -81,7 +81,14 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+/* -------  Join Section ------- */
+section#join {
+  display: flex;
+  flex-direction: column;
+}
+
 /* -------  Join Form ------- */
+
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
@@ -95,7 +102,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 60%;
 }
 
 form button {
@@ -132,7 +139,7 @@ footer p {
 }
 
 .formControl label {
-  width: 150px;
+  width: 35%;
 }
 
 /* -------  Media Query ------- */
@@ -146,15 +153,15 @@ footer p {
 
   section#join {
     display: flex;
+
     align-items: center;
   }
   section#join .img {
-    width: 60%;
+    width: 100%;
   }
 
   .formContainer {
-    margin-left: 20px;
-    width: 38%;
+    width: 75%;
   }
 
   .sectionContent {
@@ -178,5 +185,20 @@ footer p {
   }
   .blogSingle {
     width: 49%;
+  }
+}
+
+@media (min-width: 850px) {
+  section#join {
+    flex-direction: row;
+  }
+
+  section#join .formContainer {
+    margin-left: 20px;
+  }
+
+  .formContainer-inside {
+    max-width: 450px;
+    margin: auto;
   }
 }
