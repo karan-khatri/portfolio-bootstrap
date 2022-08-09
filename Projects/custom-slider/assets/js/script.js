@@ -11,10 +11,9 @@ $(document).on('ready', function () {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 1000,
-  })
+  });
 
   $('.owl-carousel').owlCarousel({
-    
     center: true,
     loop: true,
     margin: 0,
@@ -34,42 +33,42 @@ $(document).on('ready', function () {
         items: 5,
       },
     },
-  })
+  });
 
-  $('.owl-item').css('transform', 'scale(0.9)')
-  $('.active').css('transform', 'scale(1.08)')
-  $('.owl-item.center').css('transform', 'scale(1.3)')
-  $('.active:first').css('transform', 'scale(1)')
-  $('.active').last().css('transform', 'scale(1)')
-  $('.active').css('zIndex', '2')
-  $('.active').first().css('zIndex', '-1')
-  $('.active').last().css('zIndex', '-1')
+  $('.owl-item').css('transform', 'scale(0.9)');
+  $('.active').css({ transform: 'scale(1.08)' });
+  $('.owl-item.center').css({ transform: 'scale(1.3)' });
+  $('.active:first').css({ transform: 'scale(1)', boxShadow: 'none' });
+  $('.active').last().css({ transform: 'scale(1)', boxShadow: 'none' });
+  $('.active').css('zIndex', '2');
+  $('.active').first().css({ zIndex: '-1', boxShadow: 'none' });
+  $('.active').last().css({ zIndex: '-1', boxShadow: 'none' });
 
   $('.owl-nav').click(function (e) {
-    $('.owl-item').css('transform', 'scale(0.9)')
-    $('.active').css('transform', 'scale(1.08)')
-    $('.owl-item.center').css('transform', 'scale(1.3)')
-    $('.active:first').css('transform', 'scale(1)')
-    $('.active').last().css('transform', 'scale(1)')
+    $('.owl-item').css('transform', 'scale(0.9)');
+    $('.active').css('transform', 'scale(1.08)');
+    $('.owl-item.center').css('transform', 'scale(1.3)');
+    $('.active:first').css('transform', 'scale(1)');
+    $('.active').last().css('transform', 'scale(1)');
 
-    $('.active').css('zIndex', '2')
-    $('.active').first().css('zIndex', '-1')
-    $('.active').last().css('zIndex', '-1')
+    $('.active').css('zIndex', '2');
+    $('.active').first().css({ zIndex: '-1', boxShadow: 'none' });
+    $('.active').last().css({ zIndex: '-1', boxShadow: 'none' });
 
-    e.preventDefault()
-  })
+    e.preventDefault();
+  });
 
   $('.owl-carousel')
     .owlCarousel()
     .on('dragged.owl.carousel', function (event) {
-      $('.owl-item').css('transform', 'scale(0.9)')
-      $('.active').css('transform', 'scale(1.08)')
-      $('.owl-item.center').css('transform', 'scale(1.3)')
-      $('.active:first').css('transform', 'scale(1)')
-      $('.active').last().css('transform', 'scale(1)')
-      $('.active').css('zIndex', '2')
-      $('.active').first().css('zIndex', '-1')
-      $('.active').last().css('zIndex', '-1')
-      event.preventDefault()
-    })
-})
+      $('.owl-item').css('transform', 'scale(0.9)');
+      $('.active').css('transform', 'scale(1.08)');
+      $('.owl-item.center').css('transform', 'scale(1.3)');
+      $('.active:first').css('transform', 'scale(1)');
+      $('.active').last().css('transform', 'scale(1)');
+      $('.active').css('zIndex', '2');
+      $('.active').first().css('zIndex', '-1');
+      $('.active').last().css('zIndex', '-1');
+      event.preventDefault();
+    });
+});
